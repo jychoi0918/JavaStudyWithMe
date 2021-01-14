@@ -1,0 +1,32 @@
+package NamGung;
+
+public class InnerEx3 {
+	private int outerIv = 0;
+	static int outerCv = 0 ;
+	
+	class InstanceInner {
+		int iiv = outerIv; //외부클래스의 private 멤버 접근 가능!!! 
+		int iiv2 = outerCv; //인스턴스는 static 가능
+	}
+	static class StiacInner{
+	//	int siv = outerIv;  스태틱은 외부클래스 인스턴스 접근 못
+		static int scv = outerCv;
+		
+	}
+	void myMethod() {
+		int lv = 0;
+		final int LV = 0;
+		
+	class LocalInner{
+		
+		int liv = outerIv;
+		int liv2 = outerCv;
+		int liv3 = lv;  // 원래 변수는 안됐지만, jdk8부터 가능(바뀌는 코드 없어야한다고들었댜!
+		int liv4 = LV;
+	}
+	
+	}
+//	public static void main(String[] args) {
+//		InnerEx3.InstaceInner i = new InnerEx3().new InstanceInner()
+//	}
+}
