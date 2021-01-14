@@ -4,8 +4,8 @@ public class InnerEx1 {
 
 	class InstanceInner{
 		int iv =0;
-//		static sv =0;  ★★ static변수 선언 안돼!
-		final static int CONST = 0; // final static은 상수라서 허용
+//		static sv =0;                           ★★ static변수 선언 안돼!
+		final static int CONST = 0; //        final static은 상수이기 때문에 인스턴스 클래스안에서 사용가능
 	}
 	
 	static class StaticInner {
@@ -15,18 +15,18 @@ public class InnerEx1 {
 	void myMethod() {
 		class LocalInner{
 			int iv =300;
-			final static int CONST = 300; //final static은 상수이므로 허용
+			final static int CONST = 300;       // final static은 상수이므로 허용
 		}
 		int i = LocalInner.CONST;
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(StaticInner.cv); //스태틱.스태틱은 가능 but 스태틱.인스턴스변수 
-//		System.out.println( StaticInner.iv);     //★★ 스태틱.인스턴스는 객체 생성 없이 안돼!
+		System.out.println(StaticInner.cv);        //  스태틱.스태틱 가능 but 스태틱.인스턴스변수 
+//		System.out.println( StaticInner.iv);       //★★ 스태틱.인스턴스는 객체 생성 없이 안돼!
 		StaticInner si = new StaticInner();
-		System.out.println(si.iv);			//	이렇게 만들기 가능!	
+		System.out.println(si.iv);			//스태틱 안의 인스턴스 변수를 객체를 생성해서 호출 가능!	
  		System.out.println(InstanceInner.CONST); //내부클래스.상수
- //		System.out.println(LocalInner.CONST);   로컨 내부 클래스는 메서드 내에서만 사용가능
+ //		System.out.println(LocalInner.CONST);   로컬내부 클래스는 메서드 내에서만 사용가능
 	}
 	
 }
