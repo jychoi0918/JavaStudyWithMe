@@ -32,7 +32,7 @@ public class guiEx1 {
 	label.setVerticalTextPosition(JLabel.TOP);
 	label.setHorizontalTextPosition(JLabel.CENTER);
 	label.setForeground(new Color(10,30,60));     //set color of Text
-	label.setFont(new Font("MV Boli",Font.ITALIC,25)); //face of Text, Treatment(?)s , size
+	label.setFont(new Font("MV Boli",Font.ITALIC,25)); //face of Text, features , size
 	
 	//if you set location's Label, it will move relative to container.
 	
