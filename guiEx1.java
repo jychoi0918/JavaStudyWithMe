@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 
 public class guiEx1 {
 
-	//This is my GUI practice code. Actually, I don't know how much it is important or not.
+	//This is my GUI practicing code. Actually, I don't know how much it is important or not.
 	// But at least I should try this one out on my curriculum so let's start it!
 	
 	public static void main(String[] args) {
